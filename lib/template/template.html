@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="NPM author dashboard.">
+	<meta name="author" content="Athan Reines">
+	<title>NPM Author Dashboard | {{username}}</title>
+	<style>
+		{{{bootstrap}}}
+	</style>
+	<style>
+		{{{styles}}}
+	</style>
+</head>
+<body>
+	<div class="dashboard">
+		<section class="packages container">
+			{{#packages}}
+				<div class="package row" id="{{name}}">
+					<div class="about col-lg-1">
+						<h2 class="name">
+							<a href="https://npmjs.com/package/{{name}}" title="{{desc}}">{{name}}</a>
+						</h2>
+						<p class="desc">{{desc}}</p>
+					</div>
+					<div class="badges-container col-lg-11">
+						<ul class="badges">
+							{{#badges}}
+								<li class="package-badge {{name}}">
+									{{#badge}}
+										<a href="{{{url}}}">
+											{{{badge}}}
+										</a>
+									{{/badge}}
+									{{^badge}}
+										{{message}}
+									{{/badge}}
+								</li>
+							{{/badges}}
+						</ul>
+					</div>
+				</div>
+			{{/packages}}
+		</section>
+	</div>
+</body>
+</html>

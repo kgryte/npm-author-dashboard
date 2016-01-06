@@ -1,0 +1,18 @@
+
+.dashboard .container {
+	width: 2000px;
+}
+
+.package .about .name {
+	font-size: 18px;
+}
+
+.package .badges {
+	position: relative;
+	list-style-type: none;
+}
+
+.package .package-badge {
+	float: left;
+	margin-right: 10px;
+}
